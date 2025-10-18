@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animations and specific styles that can't be replicated with Tailwind */
+@keyframes moveBus {
+  0%, 100% { left: 0; }
+  50% { left: calc(100% - 4rem); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+@keyframes countdown {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes arrival-pulse {
+  0%, 100% { transform: scale(1); background-color: rgb(59 130 246); }
+  50% { transform: scale(1.05); background-color: rgb(34 197 94); }
+}
+
+.animate-move-bus {
+  animation: moveBus 3s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-countdown {
+  animation: countdown 1.5s ease-in-out infinite;
+}
+
+.animate-arrival-pulse {
+  animation: arrival-pulse 2s ease-in-out infinite;
+}
