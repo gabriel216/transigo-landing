@@ -1,15 +1,6 @@
-import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [fromLocation, setFromLocation] = useState('')
-  const [toLocation, setToLocation] = useState('')
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Aquí se implementaría la lógica de búsqueda
-    console.log('Buscando rutas desde:', fromLocation, 'hasta:', toLocation)
-  }
 
   return (
     <div className="min-h-screen flex flex-col">
