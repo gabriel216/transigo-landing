@@ -16,8 +16,8 @@ function App() {
             <a href="#how-it-works" className="text-gray-600 no-underline font-medium transition-colors duration-300 px-3 lg:px-4 py-2 rounded-lg hover:text-primary-600 text-sm lg:text-base">Cómo funciona</a>
             <a href="#contact" className="text-gray-600 no-underline font-medium transition-colors duration-300 px-3 lg:px-4 py-2 rounded-lg hover:text-primary-600 text-sm lg:text-base">Contacto</a>
           </nav>
-          {/* Mobile menu button */}
-          <button className="md:hidden p-2 rounded-lg hover:bg-primary-200 transition-colors duration-300">
+          {/* Mobile menu button - Hidden on mobile */}
+          <button className="hidden p-2 rounded-lg hover:bg-primary-200 transition-colors duration-300">
             <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
