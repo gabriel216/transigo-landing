@@ -32,51 +32,22 @@ function App() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">¿Cuándo llega tu bus?</h2>
             <p className="text-lg md:text-xl opacity-90 leading-relaxed max-w-2xl mx-auto lg:mx-0">Descubre en tiempo real cuándo llega tu próximo bus. No más esperas innecesarias, solo información precisa de llegadas.</p>
             
-            {/* Search Form */}
-            {/* <form className="bg-white p-8 rounded-2xl shadow-2xl text-gray-800" onSubmit={handleSearch}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                <div className="flex flex-col">
-                  <label htmlFor="from" className="font-semibold mb-2 text-gray-600">Desde</label>
-                  <input
-                    type="text"
-                    id="from"
-                    placeholder="Ubicación de origen"
-                    value={fromLocation}
-                    onChange={(e) => setFromLocation(e.target.value)}
-                    className="p-4 border-2 border-gray-200 rounded-lg text-base transition-colors duration-300 focus:outline-none focus:border-primary-400"
-                    required
-                  />
-                </div>
-                <div className="flex flex-col">
-                  <label htmlFor="to" className="font-semibold mb-2 text-gray-600">Hasta</label>
-                  <input
-                    type="text"
-                    id="to"
-                    placeholder="Destino"
-                    value={toLocation}
-                    onChange={(e) => setToLocation(e.target.value)}
-                    className="p-4 border-2 border-gray-200 rounded-lg text-base transition-colors duration-300 focus:outline-none focus:border-primary-400"
-                    required
-                  />
+            {/* Animated Bus - Mobile only */}
+            <div className="lg:hidden mt-8">
+              <div className="relative w-full h-20 bg-gradient-to-r from-primary-200/30 to-primary-300/30 rounded-2xl overflow-hidden">
+                <div className="absolute top-1/2 transform -translate-y-1/2 text-4xl animate-move-bus">
+                  🚌
                 </div>
               </div>
-              <button type="submit" className="w-full bg-gradient-to-r from-primary-400 to-primary-600 text-white border-none py-4 px-8 rounded-lg text-lg font-semibold cursor-pointer flex items-center justify-center gap-2 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
-                <span>Buscar rutas</span>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                  <path d="M21 21L16.514 16.506L21 21ZM19 10.5C19 15.194 15.194 19 10.5 19C5.806 19 2 15.194 2 10.5C2 5.806 5.806 2 10.5 2C15.194 2 19 5.806 19 10.5Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
-            </form> */}
+            </div>
           </div>
-          <div className="flex justify-center items-center mt-8 lg:mt-0">
-            <div className="relative w-64 sm:w-80 h-36 sm:h-48">
-              <div className="text-4xl sm:text-6xl absolute left-0 top-1/2 transform -translate-y-1/2 animate-move-bus">🚌</div>
-              <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-primary-400 to-primary-600 rounded-sm transform -translate-y-1/2"></div>
-              <div className="absolute top-1/2 left-0 right-0 flex justify-between transform -translate-y-1/2">
-                <div className="text-xl sm:text-2xl opacity-50 transition-opacity duration-300 animate-pulse-slow">📍</div>
-                <div className="text-xl sm:text-2xl opacity-50 transition-opacity duration-300">📍</div>
-                <div className="text-xl sm:text-2xl opacity-50 transition-opacity duration-300">📍</div>
-              </div>
+          <div className="hidden lg:flex justify-center items-center mt-8 lg:mt-0">
+            <div className="relative">
+              <img 
+                src="/app.png" 
+                alt="TransiGO App Screenshot" 
+                className="w-full max-w-sm sm:max-w-md lg:max-w-lg h-[40rem] rounded-2xl shadow-2xl border-4 border-white/20"
+              />
             </div>
           </div>
         </div>
